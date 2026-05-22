@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무너뜨릴벽은 많다 - 월별 장애인식개선 계기교육 자료실</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans KR for Apple-like clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f5f5f7; /* 애플 고유의 라이트 실버 베이지 */
+      color: #1d1d1f; /* 애플 차콜 블랙 */
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* 정밀하고 은은한 미세 섀도우 및 글래스 효과 */
+    .apple-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.015);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .apple-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* 포커스 링 개선 (웹 접근성 준수) */
+    *:focus-visible {
+      outline: 3px solid #0071e3 !important;
+      outline-offset: 2px !important;
+    }
+
+    /* 슬릭한 미니멀 스크롤바 */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 99px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-800">
+
+  <!-- 웹 접근성용 스킵 네비게이션 -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-black text-white px-5 py-2.5 rounded-full shadow-lg z-50 text-sm font-semibold transition-all">
+    본문 바로가기
+  </a>
+
+  <!-- 네비게이션 바 (슬릭한 투명 글래스 디자인) -->
+  <header class="sticky top-0 z-40 w-full bg-white/70 backdrop-blur-md border-b border-black/[0.04] transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- 브랜드 로고 및 정체성 -->
+        <a href="#" onclick="showSection('home')" class="flex items-center gap-3 group" aria-label="무너뜨릴벽은 많다 홈으로 이동">
+          <div class="w-8 h-8 rounded-lg bg-black text-white flex items-center justify-center font-bold tracking-tight text-sm transition-transform group-hover:scale-105">
+            W
+          </div>
+          <div class="flex flex-col">
+            <span class="text-base font-bold tracking-tight text-[#1d1d1f]">무너뜨릴벽은 많다</span>
+            <span class="text-[10px] text-[#86868b] font-medium tracking-wide -mt-0.5">장애인식개선 월별 자료실</span>
+          </div>
+        </a>
+
+        <!-- 서브 표어 -->
+        <div class="hidden sm:flex items-center text-xs font-semibold text-[#86868b] tracking-tight">
+          장애가 장벽이 되지 않는 우리 학교
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 영역 -->
+  <main id="main-content" class="flex-grow max-w-6xl w-full mx-auto px-6 sm:px-8 py-4" tabindex="-1">
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         SECTION 1: HOME (컴팩트한 상단 헤더 및 3열 그리드 목록)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="section-home" class="block animate-fadeIn">
+      <!-- 히어로 타이틀 영역 (여백을 극도로 최적화하여 콤팩트하게 변경) -->
+      <div class="text-center py-6 px-4 mb-4">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-black/[0.04] text-[#1d1d1f] tracking-wide mb-3 uppercase">
+          365 통합교육 아카이브
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-[#1d1d1f] tracking-tight leading-none mb-3">
+          매달 하나씩, 편견의 벽을 무너뜨리는 수업
+        </h2>
+        <p class="text-xs sm:text-sm text-[#86868b] max-w-2xl mx-auto leading-relaxed font-light">
+          1월부터 12월까지 장애와 관련된 기념일을 중심으로 수업자료를 정리한 공간입니다.<br class="hidden sm:block"> 필요한 달을 선택하고 자료를 바로 확인하세요.
+        </p>
+        <div class="mt-4 flex justify-center">
+          <button onclick="jumpToCurrentMonth()" class="px-4 py-2 bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium rounded-full shadow-sm transition-all text-xs flex items-center gap-1 hover:scale-102">
+            이번 달(5월) 자료실 바로가기 🥳
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 연간 목록 헤더 -->
+      <div class="mb-4 flex justify-between items-baseline border-b border-black/[0.05] pb-2">
+        <h3 class="text-sm sm:text-base font-bold tracking-tight text-[#1d1d1f]">월별 기념일 보관소</h3>
+        <span class="text-[11px] text-[#86868b]">원하는 달을 가볍게 터치해 보세요</span>
+      </div>
+      
+      <!-- 3열 그리드로 가독성이 뛰어난 캘린더 리스트 (그리드 격자 간격 조정 및 10~12월 너비 강화) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="calendar-grid">
+        <!-- JS 데이터를 기반으로 3열 카드 동적 렌더링 -->
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         SECTION 2: MONTH DETAIL (간소화된 월별 상세 자료실)
+         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="section-detail" class="hidden animate-fadeIn">
+      <!-- 뒤로가기 버튼 -->
+      <div class="mb-4">
+        <button onclick="showSection('home')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#86868b] hover:text-[#1d1d1f] transition-colors focus:outline-none">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          전체 달력으로 돌아가기
+        </button>
+      </div>
+
+      <!-- 월별 대표 정보 헤더 (애플 카드 타입) -->
+      <div id="detail-header" class="bg-white border border-black/[0.04] rounded-2xl p-5 shadow-sm mb-5">
+        <!-- JS에 의해 동적 렌더링 -->
+      </div>
+
+      <!-- 세련되고 정밀한 수업 자료 스페이스 (교육자료, 카드뉴스, 가정통신문 단 3개 카테고리만 제공) -->
+      <div class="bg-white border border-black/[0.04] rounded-2xl overflow-hidden shadow-sm mb-6">
+        <div class="border-b border-black/[0.04] bg-[#f5f5f7]/60 p-4">
+          <h4 class="text-xs sm:text-sm font-bold text-[#1d1d1f] tracking-tight">수업 보급 자료 다운로드</h4>
+          <p class="text-[11px] text-[#86868b] mt-0.5">교실에서 바로 인쇄 또는 재생하여 배포할 수 있는 핵심 포맷입니다.</p>
+        </div>
+
+        <div class="p-5">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="files-list">
+            <!-- 교육자료, 카드뉴스, 가정통신문 고정 3종 카드 로드 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 수업 자료 즉시 미리보기 모달창 -->
+  <div id="preview-modal" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="bg-white rounded-2xl max-w-xl w-full max-h-[80vh] flex flex-col overflow-hidden shadow-2xl border border-black/[0.04]">
+      <!-- 모달 헤더 -->
+      <div class="p-5 border-b border-black/[0.05] flex justify-between items-center bg-[#f5f5f7]">
+        <div>
+          <span class="inline-block bg-black text-white text-[9px] font-bold px-2.5 py-0.5 rounded-full mb-1 uppercase tracking-wide" id="modal-tag">수업자료</span>
+          <h3 id="modal-title" class="text-sm font-bold text-[#1d1d1f]">자료 미리보기</h3>
+        </div>
+        <button onclick="closePreviewModal()" class="text-[#86868b] hover:text-[#1d1d1f] p-2 rounded-full hover:bg-black/[0.04] focus:outline-none" aria-label="모달창 닫기">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- 모달 콘텐츠 본문 -->
+      <div class="p-6 overflow-y-auto flex-grow text-xs sm:text-sm text-[#1d1d1f] leading-relaxed" id="modal-content-body">
+        <!-- 동적 삽입 -->
+      </div>
+      <!-- 모달 푸터 -->
+      <div class="p-5 bg-[#f5f5f7] border-t border-black/[0.05] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <span class="text-[9px] text-[#86868b] text-center sm:text-left">※ 장애 포용을 위해 무상으로 제공되는 교육 교재입니다.</span>
+        <button onclick="triggerFileDownload()" class="w-full sm:w-auto px-5 py-2 bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold rounded-full text-xs transition-all shadow-sm">
+          직접 다운로드하기
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 토스트 알림창 -->
+  <div id="custom-toast" class="fixed bottom-6 right-6 bg-[#1d1d1f] text-white px-5 py-4 rounded-2xl shadow-2xl flex items-center gap-3.5 z-50 transform translate-y-20 opacity-0 transition-all duration-500 max-w-sm border border-white/10">
+    <div class="bg-blue-600 text-white p-1.5 rounded-full shrink-0" id="toast-icon">
+      <!-- 동적 삽입 -->
+    </div>
+    <div class="text-xs sm:text-sm font-semibold" id="toast-msg">알림 메시지</div>
+  </div>
+
+  <!-- 푸터 정보 (가장 심플하고 깨끗하게 가공된 필수 저작권 영역) -->
+  <footer class="bg-white border-t border-black/[0.06] mt-8 py-8 transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-6 sm:px-8 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div>
+          <h5 class="text-xs font-bold text-[#1d1d1f]">무너뜨릴벽은 많다</h5>
+          <p class="text-[11px] text-[#86868b] mt-0.5">다양성을 포용하며 장벽을 극복하는 우리 교실의 따뜻한 파트너.</p>
+        </div>
+        <p class="text-[10px] text-[#86868b]">본 자료실은 공익 목적으로 상시 무료 보급됩니다.</p>
+      </div>
+      <div class="mt-4 border-t border-black/[0.04] pt-4 text-[9px] text-[#86868b]">
+        © 2026 무너뜨릴벽은 많다. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       JAVASCRIPT: 비즈니스 로직 및 구글 드라이브 연동형 URL 데이터 탑재
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <script>
+    // 12달 연간 계기교육 통합 데이터셋 (요청에 부합하도록 교육자료, 카드뉴스, 가정통신문 3대 포맷 완벽 고정)
+    // 세련된 애플 감성 이모지 적용 완료
+    const monthlyData = {
+      1: {
+        month: "1월",
+        day: "24일",
+        emoji: "🎓",
+        title: "세계 교육의 날",
+        tagline: "장애를 이유로 누구도 배움에서 격리되어서는 안 됩니다.",
+        description: "장애인의 보편적인 학습 권리와 모두를 위한 무장애 교육 인프라를 마련하는 날입니다.",
+        explanation: "1월 24일 세계 교육의 날을 맞이하여, 학교 현장에서의 차별 없는 배움터를 구성하기 위한 기본 가치관 정립 교육을 전개해 봅니다. 시각/청각 배리어프리 교구를 함께 둘러보며 다정한 평등을 배울 수 있습니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "1월_세계교육의날_통합교재_슬라이드.ppt", size: "12.4MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_1_1" },
+          { type: "카드뉴스", name: "1월_세계교육의날_장벽없는교실_카드뉴스.pdf", size: "4.2MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_1_2" },
+          { type: "가정통신문", name: "1월_가정통신문_모두를위한교육_안내서.hwp", size: "1.2MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_1_3" }
+        ]
+      },
+      2: {
+        month: "2월",
+        day: "28일",
+        emoji: "🧬",
+        title: "세계 희귀질환의 날",
+        tagline: "겉으로 보이지 않는 신체적 특성을 다정하게 지지하고 포용합니다.",
+        description: "쉽게 드러나지 않는 신체적 다름과 소수 희귀 난치성 질환 친구들의 보건권을 상생하는 날입니다.",
+        explanation: "2월 28일은 소외되기 쉬운 전 세계의 희귀 질환 보건 복지를 깊이 생각하는 날입니다. 겉으로 드러나는 모습만으로 선입견을 가지지 않고 서로의 고유한 신체 기능을 따뜻하게 배려하는 교실 실무 지침서입니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "2월_세계희귀질환의날_신체적다름_이해교재.ppt", size: "18.1MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_2_1" },
+          { type: "카드뉴스", name: "2월_희귀질환_보이지않는특별함_카드뉴스.pdf", size: "3.8MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_2_2" },
+          { type: "가정통신문", name: "2월_가정통신문_소수포용과돌봄교감_안내서.hwp", size: "1.4MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_2_3" }
+        ]
+      },
+      3: {
+        month: "3월",
+        day: "21일",
+        emoji: "🧦",
+        title: "세계 다운증후군의 날",
+        tagline: "다채로운 양말을 다르게 신어 보며, 서로의 소중한 개성을 찬사합니다.",
+        description: "21번 염색체가 3개인 다운증후군 특징을 이해하고 알록달록 무늬 양말 캠페인을 펼칩니다.",
+        explanation: "3월 21일은 다운증후군을 지지하는 글로벌 양말 짝짝이 캠페인 주간입니다. 서로 다르게 짜여진 염색체나 신체의 차이가 얼마나 보석같이 아름다운 조화를 이루어내는지 직접 양말 그리기를 수행하며 포용력을 고취시킵니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "3월_다운증후군의날_염색체비밀과개성_PPT.ppt", size: "9.8MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_3_1" },
+          { type: "카드뉴스", name: "3월_알록달록짝짝이양말_캠페인_카드뉴스.pdf", size: "5.1MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_3_2" },
+          { type: "가정통신문", name: "3월_가정통신문_개성존중과상생약속_통신문.hwp", size: "1.1MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_3_3" }
+        ]
+      },
+      4: {
+        month: "4월",
+        day: "20일",
+        emoji: "💙",
+        title: "장애인의 날",
+        tagline: "파란 불빛으로 소외를 걷어내고 장애 장벽 철폐를 깊이 학습합니다.",
+        description: "자폐성 스펙트럼 수용을 알리는 세계 자폐인의 날(2일)과 우리나라 법정 기념일인 장애인의 날(20일)을 학습합니다.",
+        explanation: "4월은 '세계 자폐인의 날'과 '대한민국 장애인의 날'이 공존하는 핵심 달입니다. 자폐 스펙트럼 친구의 감각 상태를 공감해 보고 이동 편의 및 배리어프리의 참된 정체성을 돌아봅니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "4월_장애인의날_푸른빛소통과이동권_교재.ppt", size: "22.5MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_4_1" },
+          { type: "카드뉴스", name: "4월_장애인권리선언과일상에티켓_카드뉴스.pdf", size: "6.3MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_4_2" },
+          { type: "가정통신문", name: "4월_가정통신문_차별해소와가정연계학습지.hwp", size: "1.5MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_4_3" }
+        ]
+      },
+      5: {
+        month: "5월",
+        day: "05일",
+        emoji: "🎈",
+        title: "통합 교육과 어린이날",
+        tagline: "하나의 운동장에서 특수반과 일반반 구별 없이 뛰노는 평화로운 약속.",
+        description: "놀이기구 편의와 무장애 놀이터 조성을 알아보고 우리 교실의 공평한 통합 우정을 다듬어 갑니다.",
+        explanation: "5월 어린이날을 통하여 모든 어린이가 차별받지 않고 즐거운 놀이를 경험할 수 있는 안전 통합학급을 구축합니다. 휠체어를 이용하는 친구도 함께 안전하게 발맞출 수 있는 보편 규칙을 설계합니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "5월_통합교육과배리어프리놀이터_슬라이드.ppt", size: "14.2MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_5_1" },
+          { type: "카드뉴스", name: "5월_장벽없는어린이날_통합우정실천_카드뉴스.pdf", size: "4.0MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_5_2" },
+          { type: "가정통신문", name: "5월_가정통신문_통합학급안내와포용교육.hwp", size: "1.3MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_5_3" }
+        ]
+      },
+      6: {
+        month: "6월",
+        day: "27일",
+        emoji: "🕯️",
+        title: "헬렌켈러 탄생일",
+        tagline: "중복 장애의 어둠을 뛰어넘어 희망을 쏘아 올린 인권가의 깊은 발자취.",
+        description: "시청각 중복 장애 극복과 촉수화(지촉)를 파악하며 소통에 대한 인간 존엄의 의지를 배웁니다.",
+        explanation: "6월 27일은 눈과 귀가 닫혔으나 기적적으로 단어를 알아차려 평화 활동가가 된 헬렌켈러의 탄생 주간입니다. 서로의 손바닥에 소중한 사랑의 말을 지화로 쓸어보며 대화와 연대의 힘을 학습합니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "6월_헬렌켈러생애와시청각장애이해_교재.ppt", size: "11.9MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_6_1" },
+          { type: "카드뉴스", name: "6월_손바닥위에피는꽃_지촉수화소개_카드뉴스.pdf", size: "3.9MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_6_2" },
+          { type: "가정통신문", name: "6월_가정통신문_마음의눈을밝히는대화_안내.hwp", size: "1.2MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_6_3" }
+        ]
+      },
+      7: {
+        month: "7월",
+        day: "26일",
+        emoji: "🗽",
+        title: "미국 장애인법 제정일",
+        tagline: "이동과 참여의 기본적 가치이자 엘리베이터 권리를 지켜온 무장애 사회의 기원.",
+        description: "전 세계 편의 건축 법안의 기반이 된 역사적 투쟁 Capitol Crawl 사건의 교훈을 마음에 품습니다.",
+        explanation: "7월 26일은 현대 장애인 인권법의 핵심인 ADA가 공표된 날입니다. 휠체어를 내린 아이들이 계단을 맨손으로 기어 올라갔던 역사적 투쟁을 통해 교실 내의 사소한 문턱들이 얼마나 거대한 벽인지 깨닫습니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "7월_장애인법제정과이동권투쟁사_수업교안.ppt", size: "15.0MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_7_1" },
+          { type: "카드뉴스", name: "7월_문턱1cm를지우는_배리어프리_카드뉴스.pdf", size: "4.5MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_7_2" },
+          { type: "가정통신문", name: "7월_가정통신문_이웃을배려하는안전보행_통신문.hwp", size: "1.1MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_7_3" }
+        ]
+      },
+      8: {
+        month: "8월",
+        day: "21일",
+        emoji: "🎨",
+        title: "장애인 예술 활성화 주간",
+        tagline: "붓과 악기로 인간 한계를 멋지게 넘어 도약하는 다정한 명사들을 만납니다.",
+        description: "구족 작가들의 미술 노작과 음악가들의 소리 전도 해독을 통해 영혼의 창작 가치를 체험합니다.",
+        explanation: "8월 방학 시즌을 이용하여 소리를 듣지 않고 피아노 공명만으로 세기의 합창 교향곡을 완성한 베토벤과, 손발을 쓰지 못해 입끝으로 아름다운 풍경을 그려내는 구족화가들의 가슴 벅찬 미술을 탐구합니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "8월_신체의제약을초월하는_장애예술가_PPT.ppt", size: "13.6MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_8_1" },
+          { type: "카드뉴스", name: "8월_캔버스위에그려진_구족미술_카드뉴스.pdf", size: "5.0MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_8_2" },
+          { type: "가정통신문", name: "8월_가정통신문_오감으로체험하는미술관여행.hwp", size: "1.2MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_8_3" }
+        ]
+      },
+      9: {
+        month: "9월",
+        day: "23일",
+        emoji: "🤟",
+        title: "세계 수어의 날",
+        tagline: "눈으로 노래하고 얼굴로 감정을 그리는 매력적이고 유일무이한 한국 국어.",
+        description: "손짓과 풍부한 표정이 만나 빚어지는 한국수어의 헌법적 독립 상태와 농문화를 이해합니다.",
+        explanation: "9월 23일 세계 수어의 날은 청각 장애인들의 소중한 제2 공인 국어인 '수어'를 학습하는 주간입니다. 단순한 몸짓의 보완을 넘어 풍부한 표정이 문법적 가치를 발휘하는 아름다운 대화 리듬을 배웁니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "9월_한국수어와눈으로듣는대화_수업교안.ppt", size: "16.4MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_9_1" },
+          { type: "카드뉴스", name: "9월_나비같은손짓_수어상식_카드뉴스.pdf", size: "4.8MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_9_2" },
+          { type: "가정통신문", name: "9월_가정통신문_손으로속삭이는사랑과인사.hwp", size: "1.3MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_9_3" }
+        ]
+      },
+      10: {
+        month: "10월",
+        day: "15일 / 24일",
+        emoji: "🦯",
+        title: "흰지팡이의 날 & 발달장애인의 날",
+        tagline: "자립 보행을 알리는 소중한 이정표인 흰지팡이 보행자를 응원합니다.",
+        description: "도시 편의 노란색 점자 블록의 진정한 기능과 발달장애 친구의 자기 결정권을 옹호합니다.",
+        explanation: "10월 15일 흰지팡이의 날을 맞이해, 시각 장애인이 스스로 도로를 개척하는 안전핀인 지팡이 약칙을 익히고, 도로 위 불법 방치물(자전거, 킥보드)이 불러오는 장벽 실태를 현장 모니터링해 봅니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "10월_흰지팡이안전수칙과점자블록_PPT.ppt", size: "11.8MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_10_1" },
+          { type: "카드뉴스", name: "10월_지팡이가안내하는_자립보행_카드뉴스.pdf", size: "5.5MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_10_2" },
+          { type: "가정통신문", name: "10월_가정통신문_우리안전지킴노란약속블록.hwp", size: "1.4MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_10_3" }
+        ]
+      },
+      11: {
+        month: "11월",
+        day: "04일 / 11일",
+        emoji: "⠎",
+        title: "한글 점자의 날",
+        tagline: "장애계의 세종대왕, 송암 박두성 할아버지의 6점식 활자 독립 영웅사.",
+        description: "일제 탄압기 비밀리에 우리 자모음을 점자로 지켜낸 눈부신 여섯 개 요철 훈맹정음의 과학.",
+        explanation: "11월 4일 한글 점자의 날은 일제의 삼엄한 통치 속에서도 우리 문화를 빼앗기지 않기 위해 완성된 훈맹정음을 공부하는 날입니다. 실생활 엘리베이터 숫자 버튼 속의 점자를 규칙에 맞춰 읽어내는 수학 놀이를 체험합니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "11월_한글점자훈맹정음창제와박두성_교재.ppt", size: "14.8MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_11_1" },
+          { type: "카드뉴스", name: "11월_어둠을이겨낸_훈맹정음상식_카드뉴스.pdf", size: "4.1MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_11_2" },
+          { type: "가정통신문", name: "11월_가정통신문_요철로읽는생각의도서관.hwp", size: "1.1MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_11_3" }
+        ]
+      },
+      12: {
+        month: "12월",
+        day: "03일",
+        emoji: "🗺️",
+        title: "세계 장애인의 날",
+        tagline: "1년의 고운 마음을 돌아보며 함께 손잡고 상생하는 연말 다정 우수 어린상 시상.",
+        description: "차별을 넘어 더 높은 하모니를 만드는 교실 약속을 회고하고 CRPD 인권 수칙을 내면에 새깁니다.",
+        explanation: "12월 3일 세계 장애인의 날을 장식하여, 동정 대신 정당한 자립과 주체적인 권리의 중요성을 인권 관점으로 총정리합니다. 한 해 통합교실 속에서 상냥한 실천을 이룩한 고운 어린이 시상식을 연출합니다.",
+        materials: [
+          { type: "교육자료 (PPT)", name: "12월_세계장애인의날과UN인권수칙_수업안.ppt", size: "15.9MB", icon: "📊", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_12_1" },
+          { type: "카드뉴스", name: "12월_우리가꿈꾸는평등교실_카드뉴스.pdf", size: "3.7MB", icon: "📱", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_12_2" },
+          { type: "가정통신문", name: "12월_가정통신문_서로의다름을칭찬하는우수장.hwp", size: "1.5MB", icon: "✉️", url: "https://drive.google.com/uc?export=download&id=YOUR_DRIVE_ID_12_3" }
+        ]
+      }
+    };
+
+    // 상태 관리 시스템
+    let state = {
+      currentView: 'home',
+      currentMonthId: 5 // 기본 5월 개방
+    };
+
+    // DOM 로드 완료
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCalendarGrid();
+      showSection('home');
+    });
+
+    // 12달 캘린더 메인 그리드 렌더링
+    function renderCalendarGrid() {
+      const grid = document.getElementById('calendar-grid');
+      grid.innerHTML = '';
+
+      Object.keys(monthlyData).forEach(mId => {
+        const item = monthlyData[mId];
+        const isCurrentMonth = (parseInt(mId) === 5); // 예시: 현재 5월 가정
+        
+        const card = document.createElement('div');
+        // 가로 폭을 최대로 활용하기 위한 패딩 및 플랙스 레이아웃 조정 (10월 잘림 완벽 제거)
+        card.className = `apple-card p-5 rounded-3xl cursor-pointer flex flex-col justify-between relative focus:outline-none focus:ring-4 focus:ring-blue-500 ${isCurrentMonth ? 'ring-2 ring-blue-500 border-transparent bg-white/95 shadow-md' : ''}`;
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `${item.month} 계기교육 자료실. 기념일은 ${item.title}. 클릭 시 바로 자료실로 이동.`);
+        
+        // 현재 달 뱃지
+        const currentBadge = isCurrentMonth 
+          ? `<span class="absolute top-5 right-5 bg-[#0071e3] text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">이달의 추천</span>` 
+          : '';
+
+        // 제목 및 텍스트 넉넉한 래핑 구조 (말줄임 없이 온전한 출력)
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-2xl font-bold text-black bg-[#f5f5f7] w-12 h-12 rounded-xl flex items-center justify-center">${item.emoji}</span>
+              ${currentBadge}
+            </div>
+            <div class="flex items-center gap-1.5 mb-1">
+              <span class="text-[10px] text-black font-extrabold bg-black/[0.04] px-2 py-0.5 rounded-md">${mId}월</span>
+              <span class="text-[10px] text-[#86868b] font-bold uppercase">기념일: ${item.day}</span>
+            </div>
+            <h4 class="text-sm sm:text-base font-bold text-[#1d1d1f] tracking-tight leading-snug mb-2 whitespace-normal break-words">
+              ${item.title}
+            </h4>
+            <p class="text-xs text-[#86868b] leading-relaxed mb-5 font-light">${item.tagline}</p>
+          </div>
+          <div class="border-t border-black/[0.04] pt-3 mt-auto flex justify-between items-center text-xs text-[#86868b]">
+            <span class="font-semibold text-[#0071e3]">자료실 탐색 →</span>
+            <span class="bg-[#f5f5f7] text-black px-2 py-0.5 rounded-md font-semibold text-[9px]">자료 3종 완비</span>
+          </div>
+        `;
+
+        // 클릭 이벤트 연동
+        card.addEventListener('click', () => selectMonth(mId));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectMonth(mId);
+          }
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    // 이번달 점프 기능
+    function jumpToCurrentMonth() {
+      selectMonth(5);
+    }
+
+    // 월 선택 비즈니스 로직
+    function selectMonth(mId) {
+      state.currentMonthId = parseInt(mId);
+      renderDetailHeader();
+      renderDetailContent();
+      showSection('detail');
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 월별 상세 헤더 정보 렌더링
+    function renderDetailHeader() {
+      const item = monthlyData[state.currentMonthId];
+      const header = document.getElementById('detail-header');
+      
+      header.innerHTML = `
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div class="flex items-center gap-5">
+            <span class="text-3xl font-extrabold bg-[#f5f5f7] border border-black/[0.04] w-14 h-14 rounded-2xl flex items-center justify-center text-black shadow-sm">${item.emoji}</span>
+            <div>
+              <span class="inline-block text-[9px] font-bold text-[#0071e3] bg-blue-50 px-2.5 py-0.5 rounded-full mb-1">${state.currentMonthId}월 계기교육</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-[#1d1d1f] tracking-tight leading-tight">${item.title} (매년 ${item.day})</h3>
+              <p class="text-xs sm:text-sm text-[#86868b] mt-1.5 max-w-xl leading-relaxed font-light">${item.description}</p>
+            </div>
+          </div>
+          <div class="bg-[#f5f5f7] p-4 rounded-2xl flex items-center gap-3 w-full md:w-auto shrink-0 border border-black/[0.02]">
+            <div class="bg-white p-2 rounded-xl text-black hidden sm:block shadow-sm">
+              🎈
+            </div>
+            <div>
+              <p class="text-[10px] font-bold text-[#86868b] tracking-wider uppercase">이 달의 교육 테마</p>
+              <p class="text-xs font-bold text-black mt-0.5">간결한 3개 수업 패키지</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // 파일 자료 목록 로드 (교육자료, 카드뉴스, 가정통신문 고정 배치)
+    function renderDetailContent() {
+      const item = monthlyData[state.currentMonthId];
+      const listContainer = document.getElementById('files-list');
+      listContainer.innerHTML = '';
+
+      if (item.materials && item.materials.length > 0) {
+        item.materials.forEach((file) => {
+          const fileCard = document.createElement('div');
+          // 고유한 파일 유형별 카드 렌더링
+          fileCard.className = "apple-card p-5 rounded-2xl flex flex-col justify-between h-48 border border-black/[0.04] transition-all duration-300";
+          
+          fileCard.innerHTML = `
+            <div>
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-bold bg-[#0071e3]/10 text-[#0071e3] px-2.5 py-1 rounded-full">${file.type}</span>
+                <span class="text-lg">${file.icon}</span>
+              </div>
+              <h5 class="text-xs sm:text-sm font-bold text-[#1d1d1f] line-clamp-2 leading-snug mb-1">${file.name}</h5>
+              <p class="text-[10px] text-[#86868b] font-medium">크기: ${file.size}</p>
+            </div>
+            
+            <div class="flex items-center gap-2 mt-4 border-t border-black/[0.03] pt-3">
+              <button onclick="previewFile('${file.name}', '${encodeURIComponent(item.explanation)}', '${file.type}')" class="flex-1 text-xs bg-white border border-black/[0.06] hover:bg-black/[0.04] text-[#1d1d1f] font-semibold py-2 rounded-full transition-all focus:outline-none text-center shadow-sm">
+                내용 미리보기
+              </button>
+              <button onclick="downloadSingleFile('${file.name}', '${file.url || ''}')" class="px-4 py-2 bg-black hover:bg-[#333336] text-white font-semibold rounded-full text-xs transition-all focus:outline-none flex items-center justify-center gap-1 shadow-sm" aria-label="${file.name} 다운로드">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                다운
+              </button>
+            </div>
+          `;
+          listContainer.appendChild(fileCard);
+        });
+      } else {
+        listContainer.innerHTML = `<p class="text-sm text-[#86868b] py-6 text-center col-span-3">등록된 연계 자료가 존재하지 않습니다.</p>`;
+      }
+    }
+
+    // 화면 전환 섹션 제어
+    function showSection(secId) {
+      state.currentView = secId;
+      if (secId === 'home') {
+        document.getElementById('section-home').classList.remove('hidden');
+        document.getElementById('section-detail').classList.add('hidden');
+      } else {
+        document.getElementById('section-home').classList.add('hidden');
+        document.getElementById('section-detail').classList.remove('hidden');
+      }
+    }
+
+    // 파일 다운로드 (구글 드라이브 주소 지원 포함)
+    function downloadSingleFile(fileName, fileUrl) {
+      if (fileUrl && fileUrl.startsWith('http')) {
+        window.open(fileUrl, '_blank');
+        showToast('다운로드', `구글 드라이브 연동을 통해 ${fileName} 다운로드를 시작합니다.`);
+      } else {
+        showToast('다운로드', `[가상 모의] ${fileName} 파일 다운로드가 정상 작동했습니다.`);
+      }
+    }
+
+    // 미리보기 관리용 변수
+    let pendingDownloadFileName = '';
+
+    // 미리보기 모달 개방
+    function previewFile(fileName, encodedExplanationText, fileType) {
+      pendingDownloadFileName = fileName;
+      const cleanText = decodeURIComponent(encodedExplanationText);
+      const modal = document.getElementById('preview-modal');
+      
+      document.getElementById('modal-tag').innerText = fileType;
+      document.getElementById('modal-title').innerText = fileName;
+      document.getElementById('modal-content-body').innerHTML = `
+        <div class="space-y-4 font-sans text-xs sm:text-sm">
+          <div class="bg-[#f5f5f7] border border-black/[0.04] rounded-2xl p-5 text-[#1d1d1f] leading-relaxed font-light">
+            <h5 class="text-xs font-bold text-black mb-2 uppercase tracking-wide">📅 이 달의 기념일 상식</h5>
+            ${cleanText}
+          </div>
+          <div class="border border-black/[0.04] rounded-2xl p-5 bg-white">
+            <h5 class="text-xs font-bold text-[#86868b] mb-3 uppercase tracking-wider">💡 현장 활용 권장 요약</h5>
+            <ol class="list-decimal list-inside text-xs text-gray-600 space-y-2 leading-relaxed font-light">
+              <li>반 배포: 교재 원본 파일을 무료 보급받은 후 반별 성격에 맞게 연계하여 수업을 개시합니다.</li>
+              <li>공감 학습: 해당 월의 핵심 가치와 올바른 에티켓 행동 수칙들을 재미있게 익혀 봅니다.</li>
+              <li>가정 연계: 가정통신문 및 카드뉴스를 학부모 커뮤니티나 가정 연계 학습으로 배포합니다.</li>
+            </ol>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closePreviewModal() {
+      document.getElementById('preview-modal').classList.add('hidden');
+    }
+
+    function triggerFileDownload() {
+      closePreviewModal();
+      showToast('다운로드', `${pendingDownloadFileName} 파일 다운로드가 완료되었습니다.`);
+    }
+
+    // 커스텀 토스트
+    function showToast(iconType, message) {
+      const toast = document.getElementById('custom-toast');
+      const iconBox = document.getElementById('toast-icon');
+      const msgBox = document.getElementById('toast-msg');
+
+      let iconHtml = '';
+      if (iconType === '경고') {
+        iconHtml = `
+          <svg class="w-4 h-4 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+          </svg>
+        `;
+      } else {
+        iconHtml = `
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        `;
+      }
+
+      iconBox.innerHTML = iconHtml;
+      msgBox.innerText = message;
+
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
